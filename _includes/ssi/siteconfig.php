@@ -13,7 +13,7 @@
 /*                                                                                               */
 /*************************************************************************************************/
 if(!isset($_SESSION)) { session_start(); }
-error_reporting(error_reporting() & ~E_NOTICE);  
+error_reporting(error_reporting() & ~E_NOTICE);
 
 header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
 header("Cache-Control: post-check=0, pre-check=0", false);
@@ -22,23 +22,23 @@ header("Pragma: no-cache");
 /*************************************************************************************************/
 /* 1. Setup User Accounts                                                                        */
 /*************************************************************************************************/
-    $adminAccount = "RFEmployee";  
-   $adminPassword = "Snapper4781"; 
+    $adminAccount = "Employee";
+   $adminPassword = $_ENV["ADMIN_PASSWORD"];
 
-   $clientAccount = "OneConsumer"; 
-  $clientPassword = "W1nd0w$8!";
+   $clientAccount = "Client";
+  $clientPassword = $_ENV["CLIENT_PASSWORD"];
 
-  $partnerAccount = "WinPartner";  
- $partnerPassword = "Win765!gg";
+  $partnerAccount = "Partner";
+ $partnerPassword = $_ENV["PARTNER_PASSWORD"];
 
 /*************************************************************************************************/
 /* 2. Setup Company, Client, Contact Info, Logos, Platform Version & Font Class                  */
 /*************************************************************************************************/
-           $brand = "Razorfish";
+           $brand = "Rob Sawyer";
 
-      $page_title = "Microsoft Windows";
+      $page_title = "Rob Sawyer: Ads";
 
-      $office_loc = "Razorfish Portland";
+      $office_loc = "";
         $add1_loc = "700 SW Taylor";
         $add2_loc = "Suite 400";
         $add3_loc = "Portland, OR 97205";
@@ -48,30 +48,30 @@ header("Pragma: no-cache");
       $cont_phone = "503.889.4530";
       $cont_email = "jackie.vanderzanden@razorfish.com";
 
-            $logo = "_includes/clients/windows.png";
-           $logo2 = "_includes/brands/razorfish.png";
+            $logo = "_includes/clients/deschutes.png";
+           $logo2 = "_includes/brands/rob.png";
 
         $bodyfont = "Segoe";
-     
+
      $cms_version = "3.2";
 
 /*************************************************************************************************/
 /* 3. Toggle Sidebar Widgets (All values should be "true" or "false".)                           */
 /*************************************************************************************************/
-      $infowidget = "false";  // Project Information Widget   
-       $navwidget = "true";  // Side Navigation Widget        
-   $partnerwidget = "true";  // Partner User Info Widget   
+      $infowidget = "false";  // Project Information Widget
+       $navwidget = "true";  // Side Navigation Widget
+   $partnerwidget = "false";  // Partner User Info Widget
 
-     $guidewidget = "true";  // User Guide Table of Contents 
-   $addyearwidget = "true";  // "Add New Year" Widget        
-$addprojectwidget = "true";  // "Add New Project" Widget     
-  $uploaderwidget = "true";  // "File Uploader" Widget       
+     $guidewidget = "true";  // User Guide Table of Contents
+   $addyearwidget = "true";  // "Add New Year" Widget
+$addprojectwidget = "true";  // "Add New Project" Widget
+  $uploaderwidget = "true";  // "File Uploader" Widget
 
 /*************************************************************************************************/
 /* 4. Global Exclusion Handling (Add files and folders that you would like hidden here)          */
 /*************************************************************************************************/
     $exclude_list = array(
-                    ".", 
+                    ".",
                     "..",
                     ".git",
                     ".gitignore",
@@ -107,7 +107,7 @@ $addprojectwidget = "true";  // "Add New Project" Widget
            $bvar2 = "";
            $bvar3 = " ".$bodyfont;
 
-if($_SESSION['is_admin'] == false){ $bvar1 = " clientlogin"; } 
+if($_SESSION['is_admin'] == false){ $bvar1 = " clientlogin"; }
 if(strpos($page_title2,'Internal') !== false){ $bvar2 = " pvtpage"; }
 
      $bodyclasses = $bvar1.$bvar2.$bvar3;

@@ -17,19 +17,13 @@ The Client Preview platform is a media content management system. For instructio
 - A: No. They play inline on the project page so all that you need to upload is raw SWFs.
 
 - Q: What languages is the Client Preview platform built on?
-- A: This platform is built using PHP & Javscript. However, it uses several other tools and libraries such as jQuery, BonobosCMS, jScrollPane, jReject & SWFObject.
+- A: This platform is built using PHP & Javascript. However, it uses several other tools and libraries such as jQuery, BonobosCMS, jScrollPane, jReject & SWFObject.
 
 - Q: Does this platform use a database?
 - A. No. All of the media is stored locally and all of the settings are stored in dynamically generated PHP files.
 
 - Q: Wouldn't it be way better if you just built this thing using a database?
-- A: Yes. Due to the nature of Razorfish's IT policies though, it was actually quite hard to get both a webserver and some way to access a database. This platform was created, in part, to navigate "around" certain corporate IT policies that were making things difficult for me.
-
-- Q: Where can I get this platform's latest source code?
-- A: It can be pulled down from [https://github.com/razorfish-west/razorfish-rcp](https://github.com/razorfish-west/razorfish-rcp).
-
-- Q: Where can I see the full changelog for this project?
-- A: The project was origionally tracked at [https://github.com/GarrettGillas/RFStaging](https://github.com/GarrettGillas/RFStaging) and the origional changelog can be found there. More recent changes can be found at the current repository: [https://github.com/razorfish-west/razorfish-rcp](https://github.com/razorfish-west/razorfish-rcp).
+- A: Yes. This platform was created, in part, to navigate "around" certain corporate IT policies that were making things difficult for some installations.
 
 - Q: What software license is this platform published under?
 - A: None.
@@ -58,21 +52,17 @@ The Client Preview platform is a media content management system. For instructio
 #### Contributors
 
 Garrett Gillas //
-Technical Production Manager -
-garrett.gillas@razorfish.com
+Technical Production Manager
+https://github.com/GarrettGillas
 
 Kevin Jones //
-Senior Presentation Layer Engineer -
-kevin.jones@razorfish.com
+Senior Presentation Layer Engineer
 
 Todd Mellors //
-QA Lead -
-todd.mellors@razorfish.com
+QA Lead
 
 Brooks Pleninger //
-Senior Designer -
-brooks.pleninger@razorfish.com
+Senior Designer
 
 Matt Bouchard //
-Program Manager -
-matt.bouchard@razorfish.com
+Program Manager
