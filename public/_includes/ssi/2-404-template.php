@@ -36,7 +36,7 @@ error
 <article>
 <h1>404 Error: This page does not exist</h1>
 
-<p>Go back to the <a href="/"><u>homepage</u></a> to find what you are looking for. Refer to the <a href="<?php echo $tld."user-guide/";?>"><u>User Guide</u></a> or contact <a href="mailto:<?php echo $supportEmail; ?>">Support</a> if you have any further questions about using the Razorfish Client Preview site.</p>
+<p>Go back to the <a href="/"><u>homepage</u></a> to find what you are looking for. Refer to the <a href="<?php echo $tld."user-guide/";?>"><u>User Guide</u></a> or contact <a href="mailto:<?php echo $supportEmail; ?>">Support</a> if you have any further questions about using the Client Preview site.</p>
 
 </article>
 </section>

@@ -36,7 +36,7 @@ unavailable
 <article>
 <h1>Access Denied: You do not have permission to view this page</h1>
 
-<p>Go back to the <a href="javascript:history.go(-1)"><u>previous page</u></a> to find what you are looking for. Refer to the <a href="<?php echo $tld."user-guide/";?>"><u>User Guide</u></a> or contact <a href="mailto:<?php echo $supportEmail; ?>?subject=<?php echo $supportEmailQuestionSubject; ?>">Support</a> if you have any further questions about using the Razorfish Client Preview site.</p>
+<p>Go back to the <a href="javascript:history.go(-1)"><u>previous page</u></a> to find what you are looking for. Refer to the <a href="<?php echo $tld."user-guide/";?>"><u>User Guide</u></a> or contact <a href="mailto:<?php echo $supportEmail; ?>?subject=<?php echo $supportEmailQuestionSubject; ?>">Support</a> if you have any further questions about using the Client Preview site.</p>
 
 </article>
 </section>
