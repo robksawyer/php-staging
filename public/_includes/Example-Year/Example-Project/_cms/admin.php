@@ -96,7 +96,6 @@ if($contents == NULL) {
 ?>
 
 <?php include '../../../_includes/ssi/siteconfig.php'; ?>
-<?php include '../../../_includes/ssi/siteconfig.php'; ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -113,7 +112,7 @@ jQuery(document).ready(function () {
 </head>
 
 
-<body onload="resizeTextArea()" onresize="resizeTextArea()" class="iframe">
+<body class="iframe">
 <form action="<?php $_SERVER['PHP_SELF']; ?>" method="post" id="form1">
 <input type="hidden" name="pass" class="cms-pass" value="<?php echo $pass; ?>">
 <textarea id="area" name="addition"><?=$contents?></textarea>
