@@ -25,14 +25,14 @@ if(isset($_POST['username'])) {
         	header('Location:  '.$_SESSION['LoginRedirect']);
         }else{
         	header('Location:  /index.php');
-        }        
+        }
     }
 
     else {
-        $errorstatus = "<div class='errorstatus'>\n" . 
-        			   "<p><span class='wrong-pw'>Incorrect Username or Password.</span><br>\n" . 
-        			   "<a href='mailto:garrett.gillas@razorfish.com?subject=Razorfish Client Preview - Login Request for " . $_SERVER['HTTP_HOST'] . "'>Request Login</a> &gt;</p>\n" . 
-        			   "</div>"; 
+        $errorstatus = "<div class='errorstatus'>\n" .
+        			   "<p><span class='wrong-pw'>Incorrect Username or Password.</span><br>\n" .
+        			   "<a href='mailto:garrett.gillas@razorfish.com?subject=Razorfish Client Preview - Login Request for " . $_SERVER['HTTP_HOST'] . "'>Request Login</a> &gt;</p>\n" .
+        			   "</div>";
     }
 }
 ?>
@@ -46,21 +46,21 @@ if(isset($_POST['username'])) {
 <script type="text/javascript" src="<?php echo $tld; ?>_includes/js/jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo $tld; ?>_includes/js/rzf.extranet.projectcontent.js"></script>
 </head>
-    
+
 
 <body class="login<?php echo $bodyclasses; ?>">
 <?php include '../_includes/ssi/header.php'; ?>
 
 <div id="content">
-<?php 
+<?php
 /* Project Info Widget */
-if($infowidget == "true"){ 
-    include '../_includes/ssi/aside-info.php'; 
+if($infowidget == "true"){
+    include '../_includes/ssi/aside-info.php';
 }
 
 /* Login Page Widget   */
 else{
-    include '../_includes/ssi/aside-login.php';     
+    include '../_includes/ssi/aside-login.php';
 }
 ?>
 

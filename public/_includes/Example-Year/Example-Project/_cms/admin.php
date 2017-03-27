@@ -19,11 +19,11 @@ if(strcmp($pass,"CHANGE_THIS_PASSWORD") == 0) {?>
 	return;
 }
 
-$fn = "includes/page.txt"; 
+$fn = "includes/page.txt";
 $backup_folder = './backup';
 $error_msg = '';
 
-$home_page = "http://" . $_SERVER['HTTP_HOST'] . rtrim(dirname($_SERVER['PHP_SELF']), '/\\') . "/";
+$home_page = "//" . $_SERVER['HTTP_HOST'] . rtrim(dirname($_SERVER['PHP_SELF']), '/\\') . "/";
 
 // If the user wants to go back to dopple page, without applying changes
 if(isset($_POST['back'])) {
@@ -42,7 +42,7 @@ if(isset($_POST['addition'])) {
 
 	// Check password
 	if(strcmp($_POST['pass'],$pass) == 0) {
-	
+
 		// If magic quotes is enabled, strip slashes
 		$addition;
 		if (get_magic_quotes_gpc()) {
@@ -59,7 +59,7 @@ if(isset($_POST['addition'])) {
 			mkdir($backup_folder);
 		}
 		copy($fn, "backup/".date("Y-m-d_H-i-s").".txt");
-	
+
 		// Write the change
 		$file = fopen($fn, "w");
 		fwrite($file, $addition);
@@ -74,10 +74,10 @@ if(isset($_POST['addition'])) {
         fwrite($file, $markdown);
         fwrite($file, $footer);
         fclose($file);
-	
+
 		header ("location: " . $home_page);
 		return;
-		} 
+		}
 		else {
 		// Bad password
 		$error_msg = "<span class='wrong-pw'>Incorrect password.</span>";
@@ -91,7 +91,7 @@ if(isset($_POST['addition'])) {
 }
 
 if($contents == NULL) {
-    $contents = file_get_contents($fn); 
+    $contents = file_get_contents($fn);
 }
 ?>
 
@@ -108,7 +108,7 @@ if($contents == NULL) {
 <script type="text/javascript">
 jQuery(document).ready(function () {
 	$("textarea").tabby();
-}); 
+});
 </script>
 </head>
 
