@@ -20,13 +20,13 @@ header("Pragma: no-cache");
 /*************************************************************************************************/
 /* 1. Setup User Accounts                                                                        */
 /*************************************************************************************************/
-    $adminAccount = "Employee";
+    $adminAccount = $_ENV["ADMIN_USERNAME"];
    $adminPassword = $_ENV["ADMIN_PASSWORD"];
 
-   $clientAccount = "Client";
+   $clientAccount = $_ENV["CLIENT_USERNAME"];
   $clientPassword = $_ENV["CLIENT_PASSWORD"];
 
-  $partnerAccount = "Partner";
+  $partnerAccount = $_ENV["PARTNER_USERNAME"];
  $partnerPassword = $_ENV["PARTNER_PASSWORD"];
 
           $supportEmail = $_ENV["SUPPORT_EMAIL"];
