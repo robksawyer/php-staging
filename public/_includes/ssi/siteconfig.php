@@ -1,8 +1,6 @@
 <?php
 /*************************************************************************************************/
-/* Project information & setup for the Razorfish Client Preview platfom.                         */
-/* For documentation & support contact Garrett Gillas at Razorfish Portland.                     */
-/* Email: garrett.gillas@razorfish.com                                                           */
+/* Project information & setup for the Client Preview platfom.                                   */
 /*                                                                                               */
 /* Contents:                                                                                     */
 /*   1. User Account Setup                                                                       */
@@ -31,6 +29,11 @@ header("Pragma: no-cache");
   $partnerAccount = "Partner";
  $partnerPassword = $_ENV["PARTNER_PASSWORD"];
 
+          $supportEmail = $_ENV["SUPPORT_EMAIL"];
+ $supportPersonFullName = $_ENV["SUPPORT_FULL_NAME"];
+ $supportEmailQuestionSubject = "Client Preview Support Question";
+ $supportEmailLoginRequestSubject = "Client Preview - Login Request for " . $_SERVER['HTTP_HOST'];
+
 /*************************************************************************************************/
 /* 2. Setup Company, Client, Contact Info, Logos, Platform Version & Font Class                  */
 /*************************************************************************************************/
@@ -39,14 +42,14 @@ header("Pragma: no-cache");
       $page_title = "Rob Sawyer: Ads";
 
       $office_loc = "";
-        $add1_loc = "700 SW Taylor";
-        $add2_loc = "Suite 400";
-        $add3_loc = "Portland, OR 97205";
+        $add1_loc = "";
+        $add2_loc = "";
+        $add3_loc = "Portland, OR 97210";
 
-       $cont_name = "Jackie VanderZanden";
-      $cont_title = "Client Partner";
-      $cont_phone = "503.889.4530";
-      $cont_email = "jackie.vanderzanden@razorfish.com";
+       $cont_name = "";
+      $cont_title = "";
+      $cont_phone = "";
+      $cont_email = "";
 
             $logo = "_includes/clients/deschutes.png";
            $logo2 = "_includes/brands/rob.png";

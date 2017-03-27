@@ -3,7 +3,7 @@ include '../_includes/ssi/siteconfig.php';
 include '../_includes/ssi/checkauth.php';
 if($_SESSION['is_admin'] == false) echo "<script>window.location = '".$tld."/unavailable';</script>";
 /*************************************************************************************************/
-/* Global settings for the Razorfish Client Preview platfom.                                     */
+/* Global settings for the Client Preview platfom.                                               */
 /* These settings overwrite settings that are defined in siteconfig.php.                         */
 /*************************************************************************************************/
 ?>
@@ -11,7 +11,7 @@ if($_SESSION['is_admin'] == false) echo "<script>window.location = '".$tld."/una
 <html xmlns="//www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <meta charset="utf-8">
-<title><?php echo $page_title2; ?> | Razorfish Client Preview</title>
+<title><?php echo $page_title2; ?> | Client Preview</title>
 <link rel="shortcut icon" href="<?php echo $tld; ?>_includes/images/favicon.ico" type="image/x-icon">
 <style type="text/css" media="all">@import url(<?php echo $tld; ?>_includes/styles/styles.css);</style>
 <script type="text/javascript" src="<?php echo $tld; ?>_includes/js/jquery.min.js"></script>
@@ -45,8 +45,7 @@ if($_SESSION['is_partner'] == false && $navwidget == "true"){
 
 <h2>Setting up the <?php echo $brand; ?> Client Preview Platform</h2>
 
-<p>The Razorfish Client Preview platform is a tool for Razorfish employees to use to post creative media for internal and client reviews. This page is designed
-to assist in the setup of a new staging environment and is inly visible to Administrators. Here are a few things to bear in mind when setting up a new site:</p>
+<p>The Client Preview platform is a tool for people to use in order to post creative media for internal and client reviews. This page is designed to assist in the setup of a new staging environment and is inly visible to Administrators. Here are a few things to bear in mind when setting up a new site:</p>
 
 <ol>
 <li>Additional company logos can be added by uploading them to the folder "<code>_includes/brands/</code>" and then selected from this page.</li>
@@ -57,7 +56,7 @@ to assist in the setup of a new staging environment and is inly visible to Admin
 
 <p>The following accounts have been setup on this site. If any of the usernames below say "example", then they need to be manually by an administrator.
 If you need further assistance, contact
-<a href="mailto:garrett.gillas@razorfish.com?subject=<?php echo $brand; ?> Client Preview Support Question - <?php echo $tld; ?>">Support</a>.</p>
+<a href="mailto:<?php echo $supportEmail; ?>?subject=<?php echo $brand; ?> Client Preview Support Question - <?php echo $tld; ?>">Support</a>.</p>
 
 <p>Admin Username: <code><?php echo $adminAccount; ?></code><br>
 Client Username: <code><?php echo $clientAccount; ?></code><br>

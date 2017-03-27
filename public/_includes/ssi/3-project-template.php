@@ -1,13 +1,13 @@
 <?php
 include '../../_includes/ssi/siteconfig.php';
 include '../../_includes/ssi/checkauth.php';
-if($_SESSION['is_admin'] == false){ if (strpos($page_title2,'Internal') !== false) { echo "<script>window.location = '".$tld."/unavailable';</script>"; } } 
+if($_SESSION['is_admin'] == false){ if (strpos($page_title2,'Internal') !== false) { echo "<script>window.location = '".$tld."/unavailable';</script>"; } }
 ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">  
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <meta charset="utf-8">
-<title><?php echo $page_title2; ?> | Razorfish Client Preview</title>
+<title><?php echo $page_title2; ?> | Client Preview</title>
 <link rel="shortcut icon" href="<?php echo $tld; ?>_includes/images/favicon.ico" type="image/x-icon">
 <style type="text/css" media="all">@import url(<?php echo $tld; ?>_includes/styles/styles.css);</style>
 <script type="text/javascript" src="<?php echo $tld; ?>_includes/js/jquery.min.js"></script>
@@ -18,32 +18,32 @@ if($_SESSION['is_admin'] == false){ if (strpos($page_title2,'Internal') !== fals
 
 <body class="client<?php echo $bodyclasses; ?>">
 
-<?php include '../../_includes/ssi/header.php'; ?> 
+<?php include '../../_includes/ssi/header.php'; ?>
 
 <div id="content">
-<?php 
-/* Project Info Widget  */ 
-if($_SESSION['is_admin'] == false && $infowidget == "true"){ 
-	include '../../_includes/ssi/aside-info.php'; 
-} 
+<?php
+/* Project Info Widget  */
+if($_SESSION['is_admin'] == false && $infowidget == "true"){
+	include '../../_includes/ssi/aside-info.php';
+}
 
-/* File Uploader Widget */ 
-if($_SESSION['is_admin'] == true && $uploaderwidget == "true"){ 
-	$_SESSION['edit_redirect'] = curPageURL(); 
+/* File Uploader Widget */
+if($_SESSION['is_admin'] == true && $uploaderwidget == "true"){
+	$_SESSION['edit_redirect'] = curPageURL();
 	include '../../_includes/ssi/aside-uploader.php';
-} 
+}
 
-/* Accordion Nav Widget */ 
-if($_SESSION['is_partner'] == false && $navwidget == "true"){ 
-	include '../../_includes/ssi/aside-accordion.php'; 
-	mkmap("../.."); 
-	echo "</div><!--|.asidewrap|-->\n</aside>"; 
-} 
+/* Accordion Nav Widget */
+if($_SESSION['is_partner'] == false && $navwidget == "true"){
+	include '../../_includes/ssi/aside-accordion.php';
+	mkmap("../..");
+	echo "</div><!--|.asidewrap|-->\n</aside>";
+}
 
-/* Partner Info Widget  */ 
+/* Partner Info Widget  */
 if($_SESSION['is_partner'] == true && $partnerwidget == "true"){
 	include '../../_includes/ssi/aside-partner.php';
-} 
+}
 ?>
 
 <section>
@@ -65,12 +65,12 @@ if($_SESSION['is_partner'] == true && $partnerwidget == "true"){
 
 </article>
 
-<?php 
+<?php
 if (strpos($page_title2,'Internal') !== false) {
-	echo "<br><br><p>*This page has been made private and is only visible to Razorfish employees. ".
+	echo "<br><br><p>*This page has been made private and is only visible to employees. ".
 		 "To make this page visible to everyone, go back to the <a href='../'><u>year page</u></a> ".
-		 "and click [ MAKE PUBLIC ] on the link next to this project.</p>"; 
-} 
+		 "and click [ MAKE PUBLIC ] on the link next to this project.</p>";
+}
 ?>
 </section>
 </div><!--|#content|-->
@@ -78,7 +78,7 @@ if (strpos($page_title2,'Internal') !== false) {
 <?php include '../../_includes/ssi/footer.php'; ?>
 
 <script type="text/javascript">
-/* Kevin's on-page file displayer/sorter script */ 
+/* Kevin's on-page file displayer/sorter script */
 $(function() {
 
 	var bannersContainer = $('#bannersContainer');
@@ -103,7 +103,7 @@ $(function() {
 		var assetObject = {};
 		$('body').remove('#downloadIFrame');
 		$('.linksContainer .assetExpand').hide(200, function(){
-			
+
 			$(_assetLink).removeClass('open');
 			if($(this).has('div')){
 				$(this).flash().remove();
@@ -145,19 +145,19 @@ $(function() {
 						$(_assetLink).append(' > This file has been labeled incorrectly. See the user guide for details.');
 					}
 				}
-				
+
 			}else{
 				var temp = window.open($(_assetLink).attr('href'));
 				$(_assetLink).addClass('doc');
 			}
-		}		
+		}
 	});
 
 	function pushContent(){
 		bannersContainer.empty();
 		imagesContainer.empty();
 		documentsContainer.empty();
-		
+
 		$.each(ProjectContent.banners_SWF, function( index, value ) {
 			bannersContainer.append(value);
 		});
@@ -191,7 +191,7 @@ $(function() {
 			$('#documentsTitle').hide();
 			documentsContainer.hide();
 		}
-		
+
 
 		<?php if($_SESSION['is_admin'] == true): ?>
 
@@ -226,8 +226,8 @@ $(function() {
 
 	$(document).on(ProjectContent.DATA_REFRESH_COMPLETE, function(e){
 		setTimeout(1000, pushContent());
-	})	
-	ProjectContent.refresh(uploadPath);	
+	})
+	ProjectContent.refresh(uploadPath);
 });
 </script>
 

@@ -1,7 +1,6 @@
 /*************************************************************************************************/
-/* Project Content Javascript for the Razorfish Client Preview platfom.                          */
-/* For documentation & support contact Garrett Gillas at Razorfish Portland.                     */
-/* Email: garrett.gillas@razorfish.com                                                           */
+/* Project Content Javascript for the Client Preview platfom.                                    */
+/* For documentation & support contact Garrett Gillas at Portland.                               */
 /*                                                                                               */
 /* Contents:                                                                                     */
 /*   1. Javascript for Breadcrumb Navigation                                                     */
@@ -25,7 +24,7 @@ var ProjectContent = function (win, doc) {
       documents = [];
 
   function parseData(data){
-    
+
     for(var i = 0; i < data.length; i +=1){
 
       if(data[i].toLowerCase().indexOf('.swf') != -1){
@@ -49,7 +48,7 @@ var ProjectContent = function (win, doc) {
     $(outputLink).addClass(_type);
     $(outputLinkContainer).addClass('assetLinkItemContainer');
     $(outputLinkContainer).append(outputLink);
-    
+
     return outputLinkContainer;
   }
 
@@ -109,7 +108,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
     $('.confirm-priv').click(function(){
-        var answer = confirm("Are you sure you want to make this project visible only to Razorfish employees?");
+        var answer = confirm("Are you sure you want to make this project visible only to employees?");
         if (answer){
             return true;
         } else {
@@ -120,7 +119,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
     $('.confirm-pub').click(function(){
-        var answer = confirm("Are you sure you want to make this project visible to Razorfish clients?");
+        var answer = confirm("Are you sure you want to make this project visible to clients?");
         if (answer){
             return true;
         } else {
@@ -193,10 +192,10 @@ $.reject = function(options) {
   var opts = $.extend(true,{
     reject : { // Rejection flags for specific browsers
       all: false, // Covers Everything (Nothing blocked)
-      msie5: true, msie6: true, msie7: true, msie8: true, msie9: true, 
-      safari1: true, safari2: true, safari3: true, safari4: true, safari5: true, 
-      chrome1: true, chrome2: true, chrome3: true, chrome4: true, chrome5: true, chrome6: true, chrome7: true, chrome8: true, chrome9: true, chrome10: true,  
-      firefox1: true, firefox2: true, firefox3: true, firefox4: true, firefox5: true, firefox6: true, firefox7: true, firefox8: true, firefox9: true, firefox10: true,  
+      msie5: true, msie6: true, msie7: true, msie8: true, msie9: true,
+      safari1: true, safari2: true, safari3: true, safari4: true, safari5: true,
+      chrome1: true, chrome2: true, chrome3: true, chrome4: true, chrome5: true, chrome6: true, chrome7: true, chrome8: true, chrome9: true, chrome10: true,
+      firefox1: true, firefox2: true, firefox3: true, firefox4: true, firefox5: true, firefox6: true, firefox7: true, firefox8: true, firefox9: true, firefox10: true,
       opera: true,
       iphone: true,
     },
@@ -208,9 +207,9 @@ $.reject = function(options) {
         url: 'http://www.microsoft.com/windows/Internet-explorer/'
       },
       firefox: {
-        text: 'Mozilla Firefox', 
-        url: 'http://www.mozilla.com/firefox/' 
-      }, 
+        text: 'Mozilla Firefox',
+        url: 'http://www.mozilla.com/firefox/'
+      },
       chrome: {
         text: 'Google Chrome',
         url: 'http://www.google.com/chrome/'
@@ -220,7 +219,7 @@ $.reject = function(options) {
     // Header of pop-up window
     header: 'Your Browser is Not Supported',
     paragraph1: 'Your web browser is either out of date or not compatible with '+
-          'this website. A supported browser can be downloaded from the options below. '+ 
+          'this website. A supported browser can be downloaded from the options below. '+
           'By closing this window you may find some of the features on this website unusable.',
     paragraph2: '',
     close: true, // Allow closing of window
@@ -632,7 +631,7 @@ var _scrollSize = function() {
 /*************************************************************************************************/
 /* 6. jQuery Browser Plugin - Version 2.4                                                        */
 /*    Updated By: Steven Bower for use with jReject plugin                                       */
-/*************************************************************************************************/ 
+/*************************************************************************************************/
 (function ($) {
   $.browserTest = function (a, z) {
     var u = 'unknown',

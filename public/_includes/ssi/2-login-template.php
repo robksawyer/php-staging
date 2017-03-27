@@ -31,7 +31,7 @@ if(isset($_POST['username'])) {
     else {
         $errorstatus = "<div class='errorstatus'>\n" .
         			   "<p><span class='wrong-pw'>Incorrect Username or Password.</span><br>\n" .
-        			   "<a href='mailto:garrett.gillas@razorfish.com?subject=Razorfish Client Preview - Login Request for " . $_SERVER['HTTP_HOST'] . "'>Request Login</a> &gt;</p>\n" .
+        			   "<a href='mailto:".$supportEmail."?subject=".$supportEmailLoginRequestSubject."'>Request Login</a> &gt;</p>\n" .
         			   "</div>";
     }
 }
@@ -40,7 +40,7 @@ if(isset($_POST['username'])) {
 <html xmlns="//www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <meta charset="utf-8">
-<title><?php echo $page_title; ?> | Razorfish Client Preview</title>
+<title><?php echo $page_title; ?> | Client Preview</title>
 <link rel="shortcut icon" href="<?php echo $tld; ?>_includes/images/favicon.ico" type="image/x-icon">
 <style type="text/css" media="all">@import url(<?php echo $tld; ?>_includes/styles/styles.css);</style>
 <script type="text/javascript" src="<?php echo $tld; ?>_includes/js/jquery.min.js"></script>

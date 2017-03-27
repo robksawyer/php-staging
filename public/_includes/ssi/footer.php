@@ -1,25 +1,25 @@
 <footer>
-<p>&copy;<script>var year = new Date();document.write(year.getFullYear());</script> <?php echo $brand; ?> &nbsp|&nbsp  
-<a href="mailto:garrett.gillas@razorfish.com?subject=<?php echo $brand; ?> Client Preview Support Question - <?php echo $tld; ?>">Support</a>  &nbsp|&nbsp   
-<a href="<?php echo $tld."user-guide/";?>">User Guide</a><?php if($_SESSION['username']): ?> &nbsp;|&nbsp; 
+<p>&copy;<script>var year = new Date();document.write(year.getFullYear());</script> <?php echo $brand; ?> &nbsp|&nbsp
+<a href="mailto:<?php echo $supportEmail; ?>?subject=<?php echo $brand; ?> Client Preview Support Question - <?php echo $tld; ?>">Support</a>  &nbsp|&nbsp
+<a href="<?php echo $tld."user-guide/";?>">User Guide</a><?php if($_SESSION['username']): ?> &nbsp;|&nbsp;
 
 <?php if($_SESSION['is_admin'] == true) { ?>
 <a href="<?php echo $tld."settings/";?>">Settings</a> &nbsp;|&nbsp;
 <?php ;} ?>
 
 <a href="<?php echo $tld; ?>login/?logout=1">
-<?php 
-if($_SESSION['is_admin'] == true) {echo "(Admin) ";} 
+<?php
+if($_SESSION['is_admin'] == true) {echo "(Admin) ";}
 if($_SESSION['is_client'] == true) {echo "<!--(Client)--> ";}
-if($_SESSION['is_partner'] == true) {echo "(Partner) ";} 
+if($_SESSION['is_partner'] == true) {echo "(Partner) ";}
 ?>
 Logout</a><?php endif; ?></p>
 
-<p id="copy"><?php echo $brand; ?> Client Preview - <a href="https://razorfish-nw.atlassian.net/browse/EXTRANET-2" target="_blank">Version <?php echo $cms_version; ?></a></p>
+<p id="copy"><?php echo $brand; ?> Client Preview - Version <?php echo $cms_version; ?></p>
 <img src="<?php echo $tld.$logo2; ?>" id="logo3">
 </footer>
 
-<?php 
+<?php
 /*************************************************************************************************/
 /* Adds class to <body> tag for supported versions of IE                                         */
 /*************************************************************************************************/

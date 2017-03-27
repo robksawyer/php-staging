@@ -10,7 +10,7 @@ include '../_includes/ssi/checkauth.php';
 <html xmlns="//www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <meta charset="utf-8">
-<title><?php echo $page_title2; ?> | Razorfish Client Preview</title>
+<title><?php echo $page_title2; ?> | Client Preview</title>
 <link rel="shortcut icon" href="<?php echo $tld; ?>_includes/images/favicon.ico" type="image/x-icon">
 <style type="text/css" media="all">@import url(<?php echo $tld; ?>_includes/styles/styles.css);</style>
 <script type="text/javascript" src="<?php echo $tld; ?>_includes/js/jquery.min.js"></script>
@@ -50,7 +50,7 @@ if($_SESSION['is_partner'] == true && $partnerwidget == "true"){
 <?php if(($_SESSION['is_partner'] == true) || ($_SESSION['is_client'] == true) || ($_SESSION['is_admin'] == true)  ){ ?>
 
 <h2>Using the Client Preview Platform</h2>
-<p>The Razorfish Client Preview platform is a tool for Razorfish employees to use to post creative media for internal and client reviews.
+<p>The Client Preview platform is a tool for employees to use to post creative media for internal and client reviews.
 It has been purpose built to be scalable and flexible so that teams can review and revise media across global offices at an extremely fast pace.</p>
 
 <?php } ?>
@@ -60,14 +60,11 @@ It has been purpose built to be scalable and flexible so that teams can review a
 the use of FTP and other slow file transfer systems. We also have the ability to link projects to third party websites such as ad servers
 and rich media vendors should the need arise. Please see the instructions below for further information on how to use this platform.</p>
 
-<p>If you are a developer and would like deploy the Razorfish Client Preview platform to another account, developer documentation can be downloaded
-from <a href="https://razorfish.box.com/rfstaging" target="_blank">Box.com</a>.</p>
-
 <hr>
 <span class="edit-del" id="addyear" name="addyear">[ Setting Up ]</span>
 
 <h2>Adding Years</h2>
-<p>If you are currently using a new install of the Razorfish Client Preview platform, the first thing that you'll need to do is add a year
+<p>If you are currently using a new install of the Client Preview platform, the first thing that you'll need to do is add a year
 to start putting projects under. After you have logged in and are on the main page, enter the project year that you would like to create
 in the field on the form on the left hand side. After hitting "create", you should see the year you have entered appear on the right hand
 side of the page.</p>
@@ -137,7 +134,7 @@ Observe the file categories (Banners, Images and Documents). Click on a file tha
 
 <h2 id="delfiles" name="delfiles">Deleting Files</h2>
 <p>When you are done viewing a file. Move the mouse over the file's name again. The [delete] option will appear on the right hand side
-of the page if you are a razorfish employee. Click the [delete] button to remove the file. This option is disabled for non-Razorfish employees.</p>
+of the page if you are an employee. Click the [delete] button to remove the file. This option is disabled for non-employees.</p>
 
 
 <hr>
@@ -151,7 +148,7 @@ way will open in a new tab or window by default.</p>
 <h2 id="addtitles" name="addtitles">Adding Titles</h2>
 <p>To add additional titles to the bottom section of a project page, hover the mouse over EXTERNAL LINKS and select [edit]. To add a
 new title use the following markup (ex ##NEW TITLE). Enter your login password and click the Apply Changes button. Note that this feature
-is only available to logged in Razorfish employees.</p>
+is only available to logged in employees.</p>
 
 <h2 id="applychanges" name="applychanges">Applying Changes</h2>
 <p>Note, to save your new edits to the page you’ll need to enter your password and click Apply Changes to save your work. Clicking Cancel
@@ -170,11 +167,11 @@ what kind of syntax can be used in this area.  </p>
 
 <h2>Uploading Other Media Types</h2>
 
-<p>While the Razorfish Client Preview platform is very quick and efficient for posting standard media types, occasionally you might need to
+<p>While the Client Preview platform is very quick and efficient for posting standard media types, occasionally you might need to
 post a rich media unit, landing page, or other html-based content. In these cases, the files will need to be posted the old-fashioned way
 via FTP. However, these types of projects can still be kept alongside other media types by uploading them to a project's media folder
 (example: <code><?php echo $tld; ?>2014/example-project/media/</code>). If you need FTP access to this site, contact
-<a href="mailto:garrett.gillas@razorfish.com?subject=<?php echo $brand; ?> Client Preview Support Question - <?php echo $tld; ?>">Support</a>
+<a href="mailto:<?php echo $supportEmail; ?>?subject=<?php echo $brand; ?> Client Preview Support Question - <?php echo $tld; ?>">Support</a>
 or your project manager for access.</p>
 
 <h2 id="addlinks" name="addlinks">Adding Links</h2>
@@ -195,7 +192,7 @@ project page as explained <a href="#cms">above</a>.</p>
 
 <h2>Viewing Files</h2>
 
-<p>To view files on the Razorfish Client Preview Platform, go to the project page that has the file(s) that you would like to preview.
+<p>To view files on the Client Preview Platform, go to the project page that has the file(s) that you would like to preview.
 Then, click on the filename of the banner, image or document that you would like to view. Banners and images will display directly on the
 page while documents will either download or open in a new tab, depending on the type of file that they are.</p>
 
@@ -205,7 +202,7 @@ page while documents will either download or open in a new tab, depending on the
 <h2 id="sharing" name="sharing">Sharing Content with the Client</h2>
 
 <p>To share a project with a client, simply copy the URL of the page you would like to share and send it in an email with the client's
-username and password for this site. Clients should never, under any circumstance receive the Admin login for the Razorfish Client Preview
+username and password for this site. Clients should never, under any circumstance receive the Admin login for the Client Preview
 Platform. They can however receive and use the partner login if they wish to share an individual project page with a third party vendor or
 partner.</p>
 
@@ -215,22 +212,14 @@ partner.</p>
 <h2>Sharing Files with Partners</h2>
 
 <p>To share a project with a partner, simply copy the URL of the project page you would like to share and send it in an email with the "partner
-username and password" for this site. If you don't have this username and password, email your contact at Razorfish and they will send you one.
-Partners should never, under any circumstance receive the regular login for the Razorfish Client Preview Platform.</p>
+username and password" for this site. If you don't have this username and password, email your contact at and they will send you one.
+Partners should never, under any circumstance receive the regular login for the Client Preview Platform.</p>
 
 <?php } ?>
 <?php if($_SESSION['is_admin'] == true){  ?>
 
 <hr>
 <span class="edit-del" id="support" name="support">[ Support ]</span>
-
-<h2>Additional Support</h2>
-
-<p>This project is being tracked an updated on Jira <a href="https://razorfish-nw.atlassian.net/browse/EXTRANET-2" target="_blank">here</a>.
-If you need FTP access to this site or for any other questions regarding this platform, contact your project manager or
-<a href="mailto:garrett.gillas@razorfish.com?subject=<?php echo $brand; ?> Client Preview Support Question - <?php echo $tld; ?>">Garrett Gillas</a>
-at Razorfish Portland.</p>
-<br>
 
 <?php } ?>
 
