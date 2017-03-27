@@ -1,6 +1,6 @@
 <?php include '../_includes/ssi/siteconfig.php'; ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="//www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <meta charset="utf-8">
 <title><?php echo $page_title; ?> | Razorfish Client Preview</title>
@@ -9,28 +9,28 @@
 <script type="text/javascript" src="<?php echo $tld; ?>_includes/js/jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo $tld; ?>_includes/js/rzf.extranet.projectcontent.js"></script>
 </head>
-    
+
 
 <body class="unavailable<?php echo $bodyclasses; ?>">
 <?php include '../_includes/ssi/header.php'; ?>
 
 <div id="content">
 
-<?php 
-/* Project Info Widget  */ 
-if($infowidget == "true"){ 
+<?php
+/* Project Info Widget  */
+if($infowidget == "true"){
 	include '../_includes/ssi/aside-info.php';
-} 
+}
 
-/* Partner Info Widget */ 
+/* Partner Info Widget */
 if($_SESSION['is_partner'] == true && $partnerwidget == "true"){
 	include '../_includes/ssi/aside-partner.php';
-} 
+}
 ?>
 
 <section>
 <nav>
-unavailable 
+unavailable
 </nav>
 
 <article>

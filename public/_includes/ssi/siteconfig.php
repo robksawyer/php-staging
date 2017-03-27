@@ -111,7 +111,7 @@ if($_SESSION['is_admin'] == false){ $bvar1 = " clientlogin"; }
 if(strpos($page_title2,'Internal') !== false){ $bvar2 = " pvtpage"; }
 
      $bodyclasses = $bvar1.$bvar2.$bvar3;
-             $tld = "http://".$_SERVER['HTTP_HOST']."/";
+             $tld = "//".$_SERVER['HTTP_HOST']."/";
          $contact = "<strong>".$cont_name."</strong><br>".$cont_title."<br>".$cont_phone."<br><a href='mailto:".$cont_email."'>".$cont_email."</a>";
         $location = "<strong>".$office_loc."</strong><br>".$add1_loc."<br>".$add2_loc."<br>".$add3_loc."<br>";
         $userinfo = array(

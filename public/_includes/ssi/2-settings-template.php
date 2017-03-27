@@ -1,14 +1,14 @@
 <?php
 include '../_includes/ssi/siteconfig.php';
 include '../_includes/ssi/checkauth.php';
-if($_SESSION['is_admin'] == false) echo "<script>window.location = '".$tld."/unavailable';</script>"; 
+if($_SESSION['is_admin'] == false) echo "<script>window.location = '".$tld."/unavailable';</script>";
 /*************************************************************************************************/
 /* Global settings for the Razorfish Client Preview platfom.                                     */
 /* These settings overwrite settings that are defined in siteconfig.php.                         */
 /*************************************************************************************************/
 ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="//www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <meta charset="utf-8">
 <title><?php echo $page_title2; ?> | Razorfish Client Preview</title>
@@ -16,25 +16,25 @@ if($_SESSION['is_admin'] == false) echo "<script>window.location = '".$tld."/una
 <style type="text/css" media="all">@import url(<?php echo $tld; ?>_includes/styles/styles.css);</style>
 <script type="text/javascript" src="<?php echo $tld; ?>_includes/js/jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo $tld; ?>_includes/js/rzf.extranet.projectcontent.js"></script>
-<script>if(typeof window.history.pushState=='function'){window.history.pushState({},"Hide","<?php echo "http://".$_SERVER['HTTP_HOST'].strtok($_SERVER["REQUEST_URI"],'?'); ?>");}</script>
+<script>if(typeof window.history.pushState=='function'){window.history.pushState({},"Hide","<?php echo "//".$_SERVER['HTTP_HOST'].strtok($_SERVER["REQUEST_URI"],'?'); ?>");}</script>
 </head>
 
 
 <body class="settings<?php echo $bodyclasses; ?>">
-<?php include '../_includes/ssi/header.php'; ?> 
+<?php include '../_includes/ssi/header.php'; ?>
 
-<div id="content"> 
-<?php 
-/* Project Info Widget  */ 
-if($infowidget == "true"){ 
-  include '../_includes/ssi/aside-info.php'; 
-} 
+<div id="content">
+<?php
+/* Project Info Widget  */
+if($infowidget == "true"){
+  include '../_includes/ssi/aside-info.php';
+}
 
-/* Accordion Nav Widget */ 
-if($_SESSION['is_partner'] == false && $navwidget == "true"){ 
-	include '../_includes/ssi/aside-accordion.php'; 
-	mkmap(".."); echo "</div><!--|.asidewrap|-->\n</aside>"; 
-} 
+/* Accordion Nav Widget */
+if($_SESSION['is_partner'] == false && $navwidget == "true"){
+	include '../_includes/ssi/aside-accordion.php';
+	mkmap(".."); echo "</div><!--|.asidewrap|-->\n</aside>";
+}
 ?>
 
 <section>
@@ -46,7 +46,7 @@ if($_SESSION['is_partner'] == false && $navwidget == "true"){
 <h2>Setting up the <?php echo $brand; ?> Client Preview Platform</h2>
 
 <p>The Razorfish Client Preview platform is a tool for Razorfish employees to use to post creative media for internal and client reviews. This page is designed
-to assist in the setup of a new staging environment and is inly visible to Administrators. Here are a few things to bear in mind when setting up a new site:</p> 
+to assist in the setup of a new staging environment and is inly visible to Administrators. Here are a few things to bear in mind when setting up a new site:</p>
 
 <ol>
 <li>Additional company logos can be added by uploading them to the folder "<code>_includes/brands/</code>" and then selected from this page.</li>
@@ -55,8 +55,8 @@ to assist in the setup of a new staging environment and is inly visible to Admin
 <li>All usernames an passwords must be manually setup in the <code>setupconfig.php</code> file.</li>
 </ol>
 
-<p>The following accounts have been setup on this site. If any of the usernames below say "example", then they need to be manually by an administrator. 
-If you need further assistance, contact 
+<p>The following accounts have been setup on this site. If any of the usernames below say "example", then they need to be manually by an administrator.
+If you need further assistance, contact
 <a href="mailto:garrett.gillas@razorfish.com?subject=<?php echo $brand; ?> Client Preview Support Question - <?php echo $tld; ?>">Support</a>.</p>
 
 <p>Admin Username: <code><?php echo $adminAccount; ?></code><br>
@@ -86,7 +86,7 @@ if(isset($_GET['brand'])){
 	$new_logo2      = ($_GET["logo2"]);
 	$new_bodyfont   = ($_GET["bodyfont"]);
 
-	// Pulling widget checkbox url parameters & defining emptys 
+	// Pulling widget checkbox url parameters & defining emptys
 	if (($_GET["infowidget"]) == "true") $new_infowidget = "true";
 	else $new_infowidget = "false";
 
@@ -156,9 +156,9 @@ if(isset($_GET['brand'])){
 		);
 
 	// Pulling in array values and writing to siteconfig.php
-	$all_entries = str_replace($old_entries,$new_entries,$oldcontents);	
-	file_put_contents($configfile, $all_entries); 
-	echo "<script>location.reload();</script>";	
+	$all_entries = str_replace($old_entries,$new_entries,$oldcontents);
+	file_put_contents($configfile, $all_entries);
+	echo "<script>location.reload();</script>";
 }
 ?>
 
@@ -206,23 +206,23 @@ if(isset($_GET['brand'])){
 <?php
 //Looks for available Publicis Comapny logos.
 function mkmap_brands($dir_accord){
-	
+
 	global $exclude_list,$logo2;
-    $ffs_accord = array_diff(scandir($dir_accord,1), $exclude_list);  
-    
+    $ffs_accord = array_diff(scandir($dir_accord,1), $exclude_list);
+
     foreach($ffs_accord as $file_accord){
         if($file_accord != '.' && $file_accord!= '..' ){
             $path_accord = $dir_accord.'/'.$file_accord;
             $path_accord2 = str_replace("../", "", $path_accord);
-            
+
             // Displays available Publicis logos as form entries.
             echo "<input type='radio' class='brandimgs' name='logo2' value='".$path_accord2."'";
             if ($path_accord2 == $logo2) echo " checked";
             echo ">\n<img src='".$path_accord."' class='brands'>\n";
-        }        
-    }    
+        }
+    }
 }
-mkmap_brands("../_includes/brands"); 
+mkmap_brands("../_includes/brands");
 ?>
 </td></tr>
 
@@ -238,28 +238,28 @@ mkmap_brands("../_includes/brands");
 function mkmap_clients($dir_accord){
 
 	global $exclude_list,$logo;
-	$ffs_accord = array_diff(scandir($dir_accord,1), $exclude_list);  
-     
+	$ffs_accord = array_diff(scandir($dir_accord,1), $exclude_list);
+
 	foreach($ffs_accord as $file_accord){
 		if($file_accord != '.' && $file_accord!= '..' ){
 			$path_accord = $dir_accord.'/'.$file_accord;
 			$path_accord2 = str_replace("../", "", $path_accord);
-           
+
 			// Displays vailable client logos as form entries.
 			echo "<input type='radio' class='clientimgs' name='logo' value='".$path_accord2."'";
 			if ($path_accord2 == $logo) echo " checked";
 			echo ">\n<img src='".$path_accord."' class='brands'>\n";
-        }        
-    }    
+        }
+    }
 }
-mkmap_clients("../_includes/clients"); 
+mkmap_clients("../_includes/clients");
 ?>
 </td></tr>
 
 <tr><td class="lcol">Enable / Disable Widgets:</td>
 <td class="rcol bgcell">
 <ul class="widgetlist">
-<li><input type="checkbox" name="infowidget" value="true"<?php if($infowidget == "true") echo " checked"; ?>>Project Information Widget</li> 
+<li><input type="checkbox" name="infowidget" value="true"<?php if($infowidget == "true") echo " checked"; ?>>Project Information Widget</li>
 <li><input type="checkbox" name="addyearwidget" value="true"<?php if($addyearwidget == "true") echo " checked"; ?>>"Add New Year" Widget</li>
 <li><input type="checkbox" name="navwidget" value="true"<?php if($navwidget == "true") echo " checked"; ?>>Side Navigation Widget</li>
 <li><input type="checkbox" name="addprojectwidget" value="true"<?php if($addprojectwidget == "true") echo " checked"; ?>>"Add New Project" Widget</li>

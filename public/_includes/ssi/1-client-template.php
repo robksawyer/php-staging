@@ -4,7 +4,7 @@ include '_includes/ssi/checkauth.php';
 if($_SESSION['is_partner'] == true) echo "<script>window.location = '".$tld."/unavailable';</script>";
 ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="//www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <meta charset="utf-8">
 <title><?php echo $page_title; ?> | Client Preview</title>
@@ -12,7 +12,7 @@ if($_SESSION['is_partner'] == true) echo "<script>window.location = '".$tld."/un
 <style type="text/css" media="all">@import url(<?php echo $tld; ?>_includes/styles/styles.css);</style>
 <script type="text/javascript" src="<?php echo $tld; ?>_includes/js/jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo $tld; ?>_includes/js/rzf.extranet.projectcontent.js"></script>
-<script>if(typeof window.history.pushState=='function'){window.history.pushState({},"Hide","<?php echo "http://".$_SERVER['HTTP_HOST'].strtok($_SERVER["REQUEST_URI"],'?'); ?>");}</script>
+<script>if(typeof window.history.pushState=='function'){window.history.pushState({},"Hide","<?php echo "//".$_SERVER['HTTP_HOST'].strtok($_SERVER["REQUEST_URI"],'?'); ?>");}</script>
 </head>
 
 
@@ -63,7 +63,7 @@ function dir_nav() {
   $extravar .= "1";
 
     if(is_dir($dir_path.$entry)) {
-      echo "<h2><a href='http://".$_SERVER['HTTP_HOST']."/".$entry."/"."'>".$entry."</a>\n";
+      echo "<h2><a href='//".$_SERVER['HTTP_HOST']."/".$entry."/"."'>".$entry."</a>\n";
 
       	// Outputs [DELETE] function for admin users only.
         if($_SESSION['is_admin'] == false){
