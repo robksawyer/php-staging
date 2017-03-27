@@ -16,14 +16,13 @@
 		}
 	],
 	"config": {
-		"vendor-dir": "app/Vendor"
+		"vendor-dir": "vendors"
 	},
 	"require": {
 		"php": ">=5.6.3",
 		"ext-exif": "*",
 		"ext-memcached": "*",
 		"ext-curl": "*",
-		"ext-intl": "*",
 		"ext-oauth": "*",
 		"ext-bcmath": "*",
 		"ext-mbstring": "*",

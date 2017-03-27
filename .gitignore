@@ -2,3 +2,4 @@ _includes/20*
 log/
 *.php~HEAD
 .env
+vendors/
