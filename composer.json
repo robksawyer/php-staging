@@ -16,7 +16,7 @@
 		}
 	],
 	"config": {
-		"vendor-dir": "vendor"
+		"vendor-dir": "public/vendor"
 	},
 	"require": {
 		"php": ">=5.6.3",
