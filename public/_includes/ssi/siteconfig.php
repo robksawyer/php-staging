@@ -96,6 +96,7 @@ $addprojectwidget = "true";  // "Add New Project" Widget
                     "README.md",
                     "Thumbs.db",
                     "errors.log",
+                    "vendor",
                     "PHP_errors.log");
 
 /*************************************************************************************************/
